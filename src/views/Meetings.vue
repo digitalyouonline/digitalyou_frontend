@@ -1,6 +1,6 @@
 <template>
 <v-row class="fill-height">
-  <iframe :src=meetingsUrl allow="camera *;microphone *" >
+  <iframe :src=meetingsUrl frameBorder="0" allow="camera *;microphone *" >
   </iframe>
 </v-row>
 </template>
