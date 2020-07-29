@@ -1,14 +1,21 @@
 <template>
-<div>
-https://meetings.jimber.org/
-</div>
+<v-row class="fill-height">
+  <iframe :src=meetingsUrl allow="camera *;microphone *" >
+  </iframe>
+</v-row>
 </template>
 
 <script>
+import config from "../../public/config/config.js";
 
 export default {
   name: "Home",
   components: {
+  },
+  computed: {
+    meetingsUrl(){
+      return config.meetingsUrl;
+    }
   }
 };
 </script>

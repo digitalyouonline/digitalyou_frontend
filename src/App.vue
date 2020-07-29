@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-navigation-drawer app mini-variant dark class="secondary">
-      <v-list dense nav class="py-0">
-        <v-list-item two-line class="mini px-0" to="/">
+      <v-list dense nav class="py-0" >
+        <v-list-item two-line class="mini" align="center" to="/">
           <v-list-item-avatar>
             avatar
           </v-list-item-avatar>
