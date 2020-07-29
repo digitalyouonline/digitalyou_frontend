@@ -31,7 +31,7 @@ const routes = [
     component: Browser
   },
   {
-    path: "/filebroser",
+    path: "/filebrowser",
     name: "Filebrowser",
     component: Filebrowser
   },

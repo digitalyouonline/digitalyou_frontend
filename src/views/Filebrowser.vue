@@ -1,6 +1,6 @@
 <template>
   <v-row class="fill-height">
-    <iframe :src="filebrowserUrl"> </iframe>
+    <iframe frameBorder="0" :src="filebrowserUrl"> </iframe>
   </v-row>
 </template>
 
