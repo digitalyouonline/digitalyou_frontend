@@ -17,8 +17,15 @@ export default {
         view: "filebrowser",
       },
     ],
+    serviceUrls: null,
   },
   getters: {
-    navigation: state => state.navigation
-  }
-}
+    navigation: (state) => state.navigation,
+    serviceUrls: (state) => state.serviceUrls
+  },
+  actions: {
+    setServiceURLs: (context, urls) => {
+      context.state.serviceUrls = urls;
+    },
+  },
+};

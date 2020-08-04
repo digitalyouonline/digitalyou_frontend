@@ -33,25 +33,37 @@
     </v-navigation-drawer>
 
     <v-main>
-      <router-view></router-view>
+      <router-view v-if="loaded"></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
+import axios  from "axios";
+
 export default {
   name: "App",
 
   components: {},
 
   data: () => ({
-    // navigation: [{
-    //   i: 'e'
-    // }]
+    loaded: false
   }),
+  methods: {
+    ...mapActions([
+      "setServiceURLs"
+    ])
+  },
   computed: {
     ...mapGetters(["navigation"])
+  },
+  created: function () {
+    axios.get("config/serviceUrls.json").then(response => {
+      this.setServiceURLs(response.data)
+      this.loaded = true
+      console.log(this.loaded)
+    });
   }
 };
 </script>

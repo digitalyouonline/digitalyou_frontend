@@ -1,19 +1,17 @@
 <template>
   <v-row class="fill-height">
-    <iframe frameBorder="0" :src="browserUrl"> </iframe>
+    <iframe frameBorder="0" :src="serviceUrls.browserUrl"> </iframe>
   </v-row>
 </template>
 
 <script>
-import config from "../../public/config/config.js";
+import {mapGetters} from "vuex"
 
 export default {
   name: "Home",
   components: {},
   computed: {
-    browserUrl() {
-      return config.browserUrl;
-    }
-  }
+    ...mapGetters(["serviceUrls"])
+  },
 };
 </script>
