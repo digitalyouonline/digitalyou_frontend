@@ -58,7 +58,7 @@ router.beforeEach((to, from, next) => {
   if (authRequired && !loggedIn){
     return next('/login')
   }
-  if(!store.getters.user){
+  if(authRequired && !store.getters.user){
     store.dispatch("setUser", JSON.parse(localStorage.profile))
   }
   next()
