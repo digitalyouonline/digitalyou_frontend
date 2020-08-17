@@ -1,5 +1,6 @@
 export default {
   state: {
+    user: null,
     navigation: [
       {
         name: "Browser",
@@ -20,10 +21,14 @@ export default {
     serviceUrls: null,
   },
   getters: {
+    user: (state) => state.user,
     navigation: (state) => state.navigation,
     serviceUrls: (state) => state.serviceUrls
   },
   actions: {
+    setUser: (context, user) => {
+      context.state.user = user
+    },
     setServiceURLs: (context, urls) => {
       context.state.serviceUrls = urls;
     },

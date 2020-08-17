@@ -6,6 +6,7 @@ import Filebrowser from "../views/Filebrowser.vue";
 import Meetings from "../views/Meetings.vue";
 import Login from "../views/Login.vue"
 import Callback from "../views/Callback.vue"
+import store from "../store/index"
 
 Vue.use(VueRouter);
 
@@ -57,7 +58,9 @@ router.beforeEach((to, from, next) => {
   if (authRequired && !loggedIn){
     return next('/login')
   }
-
+  if(!store.getters.user){
+    store.dispatch("setUser", JSON.parse(localStorage.profile))
+  }
   next()
 })
 
