@@ -2,7 +2,7 @@
   <section class="home fill-height">
     <v-row class="fill-height" align="center">
       <v-col align="center" justify="center">
-        <v-row justify="center" class="my-10"><h1> DIGITAL YOU </h1></v-row>
+        <v-row justify="center" class="my-10"><img src="../assets/digital_you_color.png"></v-row>
         <v-row justify="center">
           <div
             v-for="item in navigation"

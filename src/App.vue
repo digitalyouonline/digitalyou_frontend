@@ -4,7 +4,7 @@
       <v-list dense nav class="py-0" >
         <v-list-item two-line class="mini px-0" align="center" to="/">
           <v-list-item-avatar>
-            YOU
+            <img src="./assets/logo.png"/>
           </v-list-item-avatar>
 
           <v-list-item-content>
